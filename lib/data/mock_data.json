@@ -1,0 +1,885 @@
+[
+    {
+        "id":1,
+        "subject_name":"Biology",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":2,
+        "subject_name":"Chemistry",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Atomic Structure",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Electrochemistry",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Units and Measurement",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Thermochemistry",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Chemical Bonding",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Periodic Table",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Equations and Stoichiometry",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Solutions and Mixtures",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":3,
+        "subject_name":"Physics",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Kinematics: The Physics of Motion",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Dynamics: Forces and Motion",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Impulse and Momentum",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Conservation of Energy",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Periodic and Simple Harmonic Motion",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Heat and Temperature",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Wave Energy",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Electricity and Electrical Energy",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Magnetism and Magnetic Force",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Electromagnetism and Electromagnets",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Nature and Behavior of Light",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Measurement and the Language of Physics",
+                "note_img": "",
+                "note_difficulty": "Simple",
+                "note_content": [""]
+            },
+            {
+                "note_title": "Kinematics: The Physics of Motion",
+                "note_img": "",
+                "note_difficulty": "Simple",
+                "note_content": ""
+            },
+            {
+                "note_title": "Dynamics: Forces and Motion",
+                "note_img": "",
+                "note_difficulty": "Simple",
+                "note_content": ""
+            },
+            {
+                "note_title": "Impulse and Momentum",
+                "note_img": "",
+                "note_difficulty": "Intermediate",
+                "note_content": ""
+            },
+            {
+                "note_title": "Conservation of Energy",
+                "note_img": "",
+                "note_difficulty": "Intermediate",
+                "note_content": ""
+            },
+            {
+                "note_title": "Periodic and Simple Harmonic Motion",
+                "note_img": "",
+                "note_difficulty": "Advanced",
+                "note_content": ""
+            },
+            {
+                "note_title": "Heat and Temperature",
+                "note_img": "",
+                "note_difficulty": "Intermediate",
+                "note_content": ""
+            },
+            {
+                "note_title": "Wave Energy",
+                "note_img": "",
+                "note_difficulty": "Advanced",
+                "note_content": ""
+            },
+            {
+                "note_title": "Electromagnetism and Electromagnets",
+                "note_img": "",
+                "note_difficulty": "Advanced",
+                "note_content": ""
+            },
+            {
+                "note_title": "Astronomy",
+                "note_img": "",
+                "note_difficulty": "Advanced",
+                "note_content": ""
+            }
+        ],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":4,
+        "subject_name":"Math",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":5,
+        "subject_name":"Geography",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":6,
+        "subject_name":"History",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":7,
+        "subject_name":"Civics",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    },
+    {
+        "id":8,
+        "subject_name":"English",
+        "subject_icon":"",
+        "lecture":[
+            {
+                "lecture_title": "Respiration",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Osmosis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Cellular",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Organisms",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Microscope",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Kreb Cycle",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Photosynthesis",
+                "lecture_video": ""
+            },
+            {
+                "lecture_title": "Micro-Organisms",
+                "lecture_video": ""
+            }
+        ],
+        "notes":[
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            },
+            {
+                "note_title": "Photosynthesis",
+                "note_img": "",
+                "note_difficulty": "",
+                "note_content": ""
+            }],
+        "flash_cards":[
+            {
+                "flash_title": "Metamorphosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Osmosis",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Krebs cycle",
+                "flash_description": ""
+            },
+            {
+                "flash_title": "Endocytosis",
+                "flash_description": ""
+            }
+        ],
+        "exams":[
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            },
+            {
+                "question":"",
+                "ans": ["A. ", "B. ", "C. ", "D. "],
+                "correct_ans": 1
+            }
+        ]
+    }
+]
