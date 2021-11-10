@@ -1,19 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:provider/provider.dart';
 import 'package:temaribet/providers/exams.dart';
 import 'package:temaribet/providers/subjects.dart';
+import 'package:temaribet/reusable/style.dart';
 import 'package:temaribet/ui/result.dart';
 
-class Questions extends StatelessWidget {
+class Questions extends StatefulWidget {
   static const RouteName = 'questions';
-  const Questions({Key? key}) : super(key: key);
+  // const Questions({Key? key}) : super(key: key);
+  // final courseId;
+  // final userAns;
+  // Questions(this.courseId, this.userAns);
 
+  @override
+  _QuestionsState createState() => _QuestionsState();
+}
+
+class _QuestionsState extends State<Questions> {
   @override
   Widget build(BuildContext context) {
     final courseId = ModalRoute.of(context)!.settings.arguments as String;
     final subjectName =
         Provider.of<Subjects>(context).findById(courseId).courseName;
     final exams = Provider.of<Exams>(context).findExamById(courseId).toList();
+    // Iterable<Map<String, String>>? correctAns =
+    //     exams.map((x) => {x.examID: x.ans[ansIndex!]});
+    // print(correctAns);
+    if (exams.length == userAns.length) {
+      setState(() {
+        _isButtonDisabled = false;
+      });
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text('$subjectName Exams'),
@@ -26,63 +44,68 @@ class Questions extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView.builder(
-                    shrinkWrap: false,
-                    itemCount: exams.length,
-                    itemBuilder: (context, index) {
-                      return _question(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  shrinkWrap: false,
+                  itemCount: exams.length,
+                  itemBuilder: (context, index) {
+                    return _question(
                         "${exams[index].question}",
                         exams[index].ans,
                         exams[index].ansIndex,
-                      );
-                    },
-                  )
-                  // ListView(
-                  //   children: [
-                  //     Column(
-                  //       children: [
-                  // _question(1, "Choose the best footballer ever?"),
-                  //         _question(2, "Choose the best footballer ever?"),
-                  //         _question(3, "Choose the best footballer ever?"),
-                  //         _question(4, "Choose the best footballer ever?"),
-                  //         _question(5, "Choose the best footballer ever?"),
-                  //         SizedBox(
-                  //           height: 10,
-                  //         ),
-                  //         ElevatedButton(
-                  //           onPressed: () {
-                  //             Navigator.pushNamed(context, Result.RouteName);
-                  //           },
-                  //           child: Center(
-                  //             child: Text("Result"),
-                  //           ),
-                  //         )
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
-                  ),
+                        exams[index].examID);
+                  },
+                ),
+              ),
             ),
             SizedBox(
               height: 10,
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Result.RouteName);
-              },
-              child: Center(
-                child: Text("Result"),
-              ),
-            )
+                onPressed: () {
+                  _isButtonDisabled
+                      ? null
+                      : Navigator.pushNamed(context, Result.RouteName,
+                          arguments: userAns);
+                },
+                child: Center(
+                    child: _isButtonDisabled
+                        ? Text("Result", style: TextStyle(color: Colors.grey))
+                        : Text("Result")))
           ],
         ),
       ),
     );
   }
 
-  Widget _question(String queContent, List<String> ans, int ansIndex) {
+  int score = 0;
+  int? ansIndex;
+  bool _isButtonDisabled = true;
+
+  Map<String, List> userAns = {};
+
+  bool isPressed = false;
+  Color pressed = Colors.blue;
+  Color unpressed = Colors.grey[800]!;
+  Color rong = Colors.red;
+  Color right = Colors.green;
+  String _selectedIndex = "";
+  _onSelected(String x) {
+    setState(() => _selectedIndex = x);
+  }
+
+  int? _selectedChoice;
+  _onSelectedChoice(int i) {
+    setState(() {
+      _selectedChoice = i;
+      ansIndex = i;
+    });
+  }
+
+  Widget _question(
+      String queContent, List<String> ans, int anserIndex, String examId) {
     return Padding(
+      // key: GlobalKey(),
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,23 +119,50 @@ class Questions extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          _choice('${ans[0]}'),
-          _choice('${ans[1]}'),
-          _choice('${ans[2]}'),
-          _choice('${ans[3]}'),
+          // for (var i = 0; i < ans.length; i++) _choice('${ans[i]}')
+          Container(
+            height: 320,
+            child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: ans.length,
+                itemBuilder: (context, index) {
+                  return _choice(ans[index], examId, index, anserIndex);
+                }),
+          )
+          // _choice('${ans[1]}'),
+          // _choice('${ans[2]}'),
+          // _choice('${ans[3]}'),
         ],
       ),
     );
   }
 
-  Widget _choice(String chooseContent) {
+  Widget _choice(
+      String chooseContent, String examId, int index, int anserIndex) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        setState(() {
+          print("I am clicked");
+          print(chooseContent);
+          userAns.addAll({
+            examId: [chooseContent, index, anserIndex]
+          });
+          print(userAns);
+          isPressed = true;
+          _onSelected(examId);
+          _onSelectedChoice(index);
+        });
+      },
       child: Container(
+        // height: 350,
         margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.blue[500]!),
+          border: _selectedIndex != "" && _selectedIndex == examId
+              ? _selectedChoice != null && _selectedChoice == index
+                  ? Border.all(color: pressed)
+                  : Border.all(color: unpressed)
+              : Border.all(color: unpressed),
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
@@ -120,8 +170,26 @@ class Questions extends StatelessWidget {
           children: [
             Text(
               "$chooseContent",
-              style: TextStyle(color: Colors.blue[500], fontSize: 16),
+              style: TextStyle(
+                  color: _selectedIndex != "" && _selectedIndex == examId
+                      ? _selectedChoice != null && _selectedChoice == index
+                          ? Colors.blue[500]
+                          : Colors.grey[800]
+                      : Colors.grey[800],
+                  fontSize: 16),
             ),
+            Container(
+              height: 26,
+              width: 26,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(
+                      color: _selectedIndex != "" && _selectedIndex == examId
+                          ? _selectedChoice != null && _selectedChoice == index
+                              ? Colors.blue[500]!
+                              : Colors.grey[800]!
+                          : Colors.grey[800]!)),
+            )
           ],
         ),
       ),

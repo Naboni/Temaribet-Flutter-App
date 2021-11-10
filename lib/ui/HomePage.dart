@@ -30,35 +30,36 @@ class _HomePageState extends State<HomePage> {
           color: Theme.of(context).primaryColor),
       child: SafeArea(
         child: Scaffold(
-            backgroundColor: Colors.white,
-            appBar: AppBar(
-              leading: IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () {
-                  _scaffoldKey.currentState?.openDrawer();
-                },
-              ),
-              title: Text('Home'),
-              actions: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundImage: NetworkImage(
-                        'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80'),
-                  ),
-                )
-              ],
-              elevation: 0,
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                _scaffoldKey.currentState?.openDrawer();
+              },
             ),
-            key: _scaffoldKey,
-            drawer: MainDrawer(),
-            body: ListView(
-              children: <Widget>[
-                _header(),
-                _subjects(),
-              ],
-            )),
+            title: Text('Home'),
+            actions: [
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: CircleAvatar(
+                  radius: 25,
+                  backgroundImage: NetworkImage(
+                      'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80'),
+                ),
+              )
+            ],
+            elevation: 0,
+          ),
+          key: _scaffoldKey,
+          drawer: MainDrawer(),
+          body: ListView(
+            children: <Widget>[
+              _header(),
+              _subjects(),
+            ],
+          ),
+        ),
       ),
     );
   }

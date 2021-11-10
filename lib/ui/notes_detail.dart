@@ -13,15 +13,9 @@ class NoteDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final topicId = ModalRoute.of(context)!.settings.arguments as String;
-    // final subjectName =
-    //     Provider.of<Subjects>(context).findById(courseId).courseName;
     final topic = Provider.of<Topics>(context).findById(topicId);
 
     return Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: blue,
-        //   title: Text("Biology/ Topic One"),
-        // ),
         body: CustomScrollView(
       slivers: [
         SliverAppBar(
@@ -47,109 +41,8 @@ class NoteDetails extends StatelessWidget {
           // title: Text("Biology"),
         ),
         buildImages(context, topic.noteContent),
-        // SliverToBoxAdapter(
-        //   child: SingleChildScrollView(
-        //     // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        //     child: Column(
-        //       children: [
-        //         ListView.builder(
-        //           shrinkWrap: true,
-        //           itemCount: topic.noteContent.length,
-        //           itemBuilder: (context, index) {
-        //             return Container(
-        //               child: Column(
-        //                 children: [
-        //                   Text(
-        //                     "${topic.noteContent[0]}",
-        //                     style: TextStyle(fontSize: 24),
-        //                   ),
-        //                   SizedBox(
-        //                     height: 10,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[1]}",
-        //                     style: TextStyle(
-        //                         fontSize: 16, fontWeight: FontWeight.w300),
-        //                     textAlign: TextAlign.justify,
-        //                   ),
-        //                   SizedBox(
-        //                     height: 20,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[2]}",
-        //                     style: TextStyle(fontSize: 24),
-        //                   ),
-        //                   SizedBox(
-        //                     height: 10,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[3]}",
-        //                     style: TextStyle(
-        //                         fontSize: 16, fontWeight: FontWeight.w300),
-        //                     textAlign: TextAlign.justify,
-        //                   ),
-        //                   SizedBox(
-        //                     height: 20,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[4]}",
-        //                     style: TextStyle(fontSize: 24),
-        //                   ),
-        //                   SizedBox(
-        //                     height: 10,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[5]}",
-        //                     style: TextStyle(
-        //                         fontSize: 16, fontWeight: FontWeight.w300),
-        //                     textAlign: TextAlign.justify,
-        //                   ),
-        //                   SizedBox(
-        //                     height: 20,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[6]}",
-        //                     style: TextStyle(fontSize: 24),
-        //                   ),
-        //                   SizedBox(
-        //                     height: 10,
-        //                   ),
-        //                   Text(
-        //                     "${topic.noteContent[7]}",
-        //                     style: TextStyle(
-        //                         fontSize: 16, fontWeight: FontWeight.w300),
-        //                     textAlign: TextAlign.justify,
-        //                   ),
-        //                   SizedBox(
-        //                     height: 20,
-        //                   ),
-        //                 ],
-        //               ),
-        //             );
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //   ),
-        // ),
       ],
-    )
-        // FutureBuilder(
-        //     future: rootBundle.loadString("markdown/hello.md"),
-        //     builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-        //       if (snapshot.hasData) {
-        //         return Center(
-        //             child: Markdown(
-        //           data: snapshot.data!,
-        //           selectable: true,
-        //         ));
-        //       }
-
-        //       return Center(
-        //         child: CircularProgressIndicator(),
-        //       );
-        //     }),
-        );
+    ));
   }
 
   Widget buildImages(BuildContext context, List<String> topic) =>

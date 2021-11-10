@@ -77,6 +77,34 @@ class Exams with ChangeNotifier {
     return _exams.where((element) => element.courseId == id);
   }
 
+  // int _totalScore = 0;
+  // int get totalScore => this._totalScore;
+
+  // bool _isAnswered = false;
+  // bool get isAnswered => this._isAnswered;
+
+  // void _answerQuestion(int score) {
+  //   _totalScore += score;
+  //   _questionIndex = _questionIndex + 1;
+  //   print(_questionIndex);
+  // }
+
+  // bool isCorrect(int ansIndex) {
+  //   int? correctIndex;
+  //   if (ansIndex == correctIndex) {
+  //     _totalScore++;
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+  bool _isAnsered = false;
+  bool get isAnsered => this._isAnsered;
+  bool _correctAns = false;
+  bool get correctAns => this._correctAns;
+  // int _numOfCorrectAns;
+
   void addExam() {
     // _exams.add(value);
     notifyListeners();
