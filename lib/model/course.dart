@@ -4,22 +4,25 @@ class Course {
   final String id;
   final String courseName;
   final String courseIcon;
-
+  final String courseImg;
   Course({
     required this.id,
     required this.courseName,
     required this.courseIcon,
+    required this.courseImg,
   });
 
   Course copyWith({
     String? id,
     String? courseName,
     String? courseIcon,
+    String? courseImg,
   }) {
     return Course(
       id: id ?? this.id,
       courseName: courseName ?? this.courseName,
       courseIcon: courseIcon ?? this.courseIcon,
+      courseImg: courseImg ?? this.courseImg,
     );
   }
 
@@ -28,6 +31,7 @@ class Course {
       'id': id,
       'courseName': courseName,
       'courseIcon': courseIcon,
+      'courseImg': courseImg,
     };
   }
 
@@ -36,6 +40,7 @@ class Course {
       id: map['id'],
       courseName: map['courseName'],
       courseIcon: map['courseIcon'],
+      courseImg: map['courseImg'],
     );
   }
 
@@ -44,8 +49,9 @@ class Course {
   factory Course.fromJson(String source) => Course.fromMap(json.decode(source));
 
   @override
-  String toString() =>
-      'Course(id: $id, courseName: $courseName, courseIcon: $courseIcon)';
+  String toString() {
+    return 'Course(id: $id, courseName: $courseName, courseIcon: $courseIcon, courseImg: $courseImg)';
+  }
 
   @override
   bool operator ==(Object other) {
@@ -54,9 +60,15 @@ class Course {
     return other is Course &&
         other.id == id &&
         other.courseName == courseName &&
-        other.courseIcon == courseIcon;
+        other.courseIcon == courseIcon &&
+        other.courseImg == courseImg;
   }
 
   @override
-  int get hashCode => id.hashCode ^ courseName.hashCode ^ courseIcon.hashCode;
+  int get hashCode {
+    return id.hashCode ^
+        courseName.hashCode ^
+        courseIcon.hashCode ^
+        courseImg.hashCode;
+  }
 }

@@ -40,7 +40,7 @@ class Result extends StatelessWidget {
     } else if (score == 3) {
       say = "Good job";
       imgUrl = "assets/images/parchment.png";
-    } else if (score > 1) {
+    } else if (score >= 1) {
       say = "Not good";
       imgUrl = "assets/images/lamp.png";
     } else if (score == 0) {

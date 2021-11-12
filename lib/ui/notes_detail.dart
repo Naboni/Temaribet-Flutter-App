@@ -5,10 +5,32 @@ import 'package:provider/provider.dart';
 import 'package:temaribet/providers/subjects.dart';
 import 'package:temaribet/providers/topics.dart';
 import 'package:temaribet/reusable/style.dart';
+import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 
-class NoteDetails extends StatelessWidget {
+class NoteDetails extends StatefulWidget {
   static const RouteName = '/note-details';
-  const NoteDetails({Key? key}) : super(key: key);
+
+  @override
+  _NoteDetailsState createState() => _NoteDetailsState();
+}
+
+class _NoteDetailsState extends State<NoteDetails> {
+  bool _isLoading = true;
+  late PDFDocument _pdf;
+
+  void _loadFile() async {
+    // Load the pdf file from the internet
+    _pdf = await PDFDocument.fromAsset('assets/thermodynamics.pdf');
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadFile();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,33 +38,43 @@ class NoteDetails extends StatelessWidget {
     final topic = Provider.of<Topics>(context).findById(topicId);
 
     return Scaffold(
-        body: CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          backgroundColor: Theme.of(context).primaryColor,
-          expandedHeight: 200,
-          floating: true,
-          pinned: true,
-          flexibleSpace: FlexibleSpaceBar(
-            background: Image.network(
-              "https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80",
-              fit: BoxFit.cover,
-            ),
-            title: Text(
-              "${topic.noteTopics}",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.normal,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            centerTitle: true,
-          ),
-          // title: Text("Biology"),
-        ),
-        buildImages(context, topic.noteContent),
-      ],
-    ));
+      appBar: AppBar(
+        title: Text('Thermodynmicss'),
+      ),
+      body: Center(
+          child: _isLoading
+              ? Center(child: CircularProgressIndicator())
+              : PDFViewer(document: _pdf)),
+    );
+    // Scaffold(
+    //   body: CustomScrollView(
+    //     slivers: [
+    //       SliverAppBar(
+    //         backgroundColor: Theme.of(context).primaryColor,
+    //         expandedHeight: 200,
+    //         floating: true,
+    //         pinned: true,
+    //         flexibleSpace: FlexibleSpaceBar(
+    //           background: Image.network(
+    //             "https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80",
+    //             fit: BoxFit.cover,
+    //           ),
+    //           title: Text(
+    //             "${topic.noteTopics}",
+    //             style: TextStyle(
+    //               fontSize: 18,
+    //               fontWeight: FontWeight.normal,
+    //             ),
+    //             textAlign: TextAlign.center,
+    //           ),
+    //           centerTitle: true,
+    //         ),
+    //         // title: Text("Biology"),
+    //       ),
+    //       buildImages(context, topic.noteContent),
+    //     ],
+    //   ),
+    // );
   }
 
   Widget buildImages(BuildContext context, List<String> topic) =>

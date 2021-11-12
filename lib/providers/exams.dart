@@ -77,6 +77,18 @@ class Exams with ChangeNotifier {
     return _exams.where((element) => element.courseId == id);
   }
 
+  // Map<String, List> _userAns = {};
+
+  // Map<String, List> get getUserAns {
+  //   return _userAns;
+  // }
+
+  // void saveAns(String chooseContent, String examId, int index, int anserIndex) {
+  //   _userAns.addAll({
+  //     examId: [chooseContent, index, anserIndex]
+  //   });
+  //   notifyListeners();
+  // }
   // int _totalScore = 0;
   // int get totalScore => this._totalScore;
 

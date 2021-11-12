@@ -16,6 +16,8 @@ class Notes extends StatelessWidget {
     // final courseId = ModalRoute.of(context)!.settings.arguments as String;
     final subjectName =
         Provider.of<Subjects>(context).findById(courseId).courseName;
+    final subjectImg =
+        Provider.of<Subjects>(context).findById(courseId).courseImg;
     final topics = Provider.of<Topics>(context).findByNoteId(courseId).toList();
     return Scaffold(
         // appBar: AppBar(
@@ -30,8 +32,8 @@ class Notes extends StatelessWidget {
           floating: true,
           pinned: true,
           flexibleSpace: FlexibleSpaceBar(
-            background: Image.network(
-              "https://www.lbcc.edu/sites/main/files/imagecache/carousel/main-images/hero-biology.jpg?1577830849",
+            background: Image.asset(
+              subjectImg,
               fit: BoxFit.cover,
             ),
             title: Text("$subjectName"),

@@ -40,6 +40,7 @@ dependencies:
   get: ^4.3.8
   flutter_svg: ^0.21.0+1
   provider: ^6.0.1
+  advance_pdf_viewer: ^2.0.0
 
 # dev_dependencies:
 #   flutter_test:
@@ -58,6 +59,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
